@@ -21,6 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin',
+        'username',
+        'birthday',
+        'profile_photo',
+        'about_me',
     ];
 
     /**
@@ -43,6 +48,36 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_admin' => 'boolean',
+            'birthday' => 'date',
         ];
+    }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->is_admin;
+    }
+
+    /**
+     * Get display name (username or name)
+     */
+    public function getDisplayName(): string
+    {
+        return $this->username ?: $this->name;
+    }
+
+    /**
+     * Get profile photo URL
+     */
+    public function getProfilePhotoUrl(): string
+    {
+        if ($this->profile_photo) {
+            return asset('storage/profile_photos/' . $this->profile_photo);
+        }
+        
+        return 'https://ui-avatars.com/api/?name=' . urlencode($this->getDisplayName()) . '&color=7F9CF5&background=EBF4FF';
     }
 }
