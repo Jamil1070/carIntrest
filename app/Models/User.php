@@ -75,7 +75,9 @@ class User extends Authenticatable
     public function getProfilePhotoUrl(): string
     {
         if ($this->profile_photo) {
-            return asset('storage/profile_photos/' . $this->profile_photo);
+            // Extract filename from path
+            $filename = basename($this->profile_photo);
+            return route('profile.photo', ['filename' => $filename]);
         }
         
         return 'https://ui-avatars.com/api/?name=' . urlencode($this->getDisplayName()) . '&color=7F9CF5&background=EBF4FF';

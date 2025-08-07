@@ -12,6 +12,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+// Route for serving profile photos
+Route::get('/profile-photo/{filename}', function ($filename) {
+    $path = storage_path('app/public/profile_photos/' . $filename);
+    if (!file_exists($path)) {
+        abort(404);
+    }
+    return response()->file($path);
+})->name('profile.photo');
+
 // Route om een comment toe te voegen
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 
