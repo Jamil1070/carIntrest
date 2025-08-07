@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('content')
     <h1 style="text-align:center; margin-bottom: 10px;">Auto's lijst</h1>
 
@@ -20,6 +19,23 @@
                 @endif
                 <h3>{{ $car->name }} ({{ $car->model }})</h3>
                 <p>{{ $car->description ?? 'Geen beschrijving beschikbaar.' }}</p>
+
+                {{-- Comments sectie --}}
+                <div class="comments" style="text-align: left; margin-top: 15px;">
+                    <h4>Comments:</h4>
+                    @if($car->comments->isEmpty())
+                        <p style="font-style: italic; color: #666;">Nog geen comments.</p>
+                    @else
+                        <ul style="padding-left: 20px;">
+                            @foreach($car->comments as $comment)
+                                <li>
+                                    <strong>{{ $comment->author }}:</strong> {{ $comment->content }}
+                                    <br><small style="color: #999;">{{ $comment->created_at->diffForHumans() }}</small>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
             </div>
         @endforeach
     </div>

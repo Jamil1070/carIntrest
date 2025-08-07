@@ -8,7 +8,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $cars = Car::all();
+        // Haal alle auto's op inclusief hun comments
+        $cars = Car::with('comments')->get();
+
         return view('home', compact('cars'));
     }
 }
