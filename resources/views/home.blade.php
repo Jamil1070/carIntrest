@@ -28,15 +28,34 @@
                     @else
                         <ul style="padding-left: 20px;">
                             @foreach($car->comments as $comment)
-                                <li>
+                                <li id="comment-{{ $comment->id }}" style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
                                     <strong>{{ $comment->author }}:</strong> {{ $comment->content }}
-                                    <br><small style="color: #999;">{{ $comment->created_at->diffForHumans() }}</small>
+                                    <br>
+                                    <small style="color: #999;">{{ $comment->created_at->diffForHumans() }}</small>
                                 </li>
                             @endforeach
                         </ul>
                     @endif
+                    
+                    {{-- Commentaar toevoegen formulier --}}
+                    <div style="margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h5 style="margin-bottom: 10px;">Voeg commentaar toe:</h5>
+                        <form action="{{ route('comments.store') }}" method="POST" style="display: flex; flex-direction: column; gap: 8px;">
+                            @csrf
+                            <input type="hidden" name="car_id" value="{{ $car->id }}">
+                            <input type="text" name="author" placeholder="Jouw naam" required 
+                                   style="padding: 5px; border: 1px solid #ddd; border-radius: 3px; font-size: 12px;">
+                            <textarea name="content" placeholder="Jouw commentaar" required rows="2"
+                                      style="padding: 5px; border: 1px solid #ddd; border-radius: 3px; font-size: 12px; resize: vertical;"></textarea>
+                            <button type="submit" 
+                                    style="background-color: #28a745; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">
+                                💬 Plaats commentaar
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         @endforeach
     </div>
+
 @endsection

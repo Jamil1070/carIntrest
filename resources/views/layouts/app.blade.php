@@ -79,8 +79,9 @@
         <div class="logo">CarIntrest</div>
         <nav>
             <ul>
+                <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ url('/about') }}">About</a></li>
-                <li><a href="{{ url('/contact') }}">Contact</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
                 <li><a href="{{ url('/faq') }}">FAQ</a></li>
                 <li><a href="{{ url('/profiles') }}">Profielen</a></li>
                 <li><a href="{{ url('/login') }}">Login</a></li>

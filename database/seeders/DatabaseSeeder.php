@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         // Andere seeders kun je hier ook aanroepen
         $this->call([
             CarSeeder::class,
+            CommentSeeder::class,
         ]);
     }
 }

@@ -8,14 +8,16 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function store(Request $request, Car $car)
+    public function store(Request $request)
     {
         $request->validate([
+            'car_id' => 'required|exists:cars,id',
             'author' => 'required|max:255',
             'content' => 'required',
         ]);
 
-        $car->comments()->create([
+        Comment::create([
+            'car_id' => $request->car_id,
             'author' => $request->author,
             'content' => $request->content,
         ]);
