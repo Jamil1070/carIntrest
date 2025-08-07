@@ -1,1 +1,40 @@
 *.sqlite*
+# Laravel specific
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+.phpunit.result.cache
+
+# Laravel Mix / Vite assets
+/public/hot
+/public/mix-manifest.json
+/public/css
+/public/js
+
+# IDEs en OS bestanden
+.idea
+.vscode
+*.log
+*.cache
+*.DS_Store
+Thumbs.db
+
+# Composer
+composer.phar
+
+# NPM
+npm-debug.log
+yarn-error.log
+
+# Laravel Telescope (indien gebruikt)
+storage/telescope
+
+# Laravel Horizon (indien gebruikt)
+horizon.sqlite
+
+# PHPUnit cache
+.phpunit.result.cache
