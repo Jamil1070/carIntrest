@@ -84,9 +84,25 @@
                 <li><a href="{{ route('contact') }}">Contact</a></li>
                 <li><a href="{{ route('faq') }}">FAQ</a></li>
                 <li><a href="{{ url('/profiles') }}">Profielen</a></li>
-                <li><a href="{{ url('/login') }}">Login</a></li>
+                
+                @auth
+                    <li><a href="{{ route('profile.show') }}">Mijn Profiel</a></li>
+                    <li><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Uitloggen ({{ auth()->user()->name }})</a></li>
+                    @if(auth()->user()->isAdmin())
+                        <li><a href="{{ route('admin.users.index') }}" style="color: #d4af37;">👑 Admin</a></li>
+                    @endif
+                @else
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('register') }}">Registreer</a></li>
+                @endauth
             </ul>
         </nav>
+
+        @auth
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        @endauth
     </header>
 
     <main>
