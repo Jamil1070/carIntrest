@@ -25,8 +25,8 @@ Route::get('/profile-photo/{filename}', function ($filename) {
     return response()->file($path);
 })->name('profile.photo');
 
-// Route om een comment toe te voegen
-Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+// Route om een comment toe te voegen - alleen voor ingelogde gebruikers
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store')->middleware('auth');
 
 // Contact routes
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

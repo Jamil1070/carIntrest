@@ -12,14 +12,14 @@ class CommentController extends Controller
     {
         $request->validate([
             'car_id' => 'required|exists:cars,id',
-            'author' => 'required|max:255',
             'content' => 'required',
         ]);
 
         Comment::create([
             'car_id' => $request->car_id,
-            'author' => $request->author,
+            'author' => auth()->user()->name,
             'content' => $request->content,
+            'user_id' => auth()->id(),
         ]);
 
         return redirect()->back()->with('success', 'Reactie toegevoegd!');
