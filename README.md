@@ -131,7 +131,7 @@ CarIntrest is een volledig functionele auto community platform gebouwd met Larav
 - **News**: `database/seeders/NewsSeeder.php:20-57`
 - **Admin User**: `database/seeders/AdminUserSeeder.php:12-23`
 
-## 🔧 Installatiehandleiding
+##  Installatiehandleiding
 
 ### Vereisten
 - PHP 8.1 of hoger
