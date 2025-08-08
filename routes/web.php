@@ -9,6 +9,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\FaqAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\ContactAdminController;
+use App\Http\Controllers\Admin\CarAdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -58,6 +61,20 @@ Route::middleware('auth')->group(function () {
 
 // Admin routes voor FAQ beheer
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
+    // Dashboard
+    Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
+    
+    // Contact management
+    Route::get('/contacts', [ContactAdminController::class, 'index'])->name('contacts.index');
+    Route::get('/contacts/{contact}', [ContactAdminController::class, 'show'])->name('contacts.show');
+    Route::post('/contacts/{contact}/read', [ContactAdminController::class, 'markAsRead'])->name('contacts.read');
+    Route::post('/contacts/{contact}/unread', [ContactAdminController::class, 'markAsUnread'])->name('contacts.unread');
+    Route::delete('/contacts/{contact}', [ContactAdminController::class, 'destroy'])->name('contacts.destroy');
+    
+    // Car management
+    Route::resource('cars', CarAdminController::class);
+    
+    // FAQ management
     Route::resource('faq', FaqAdminController::class);
     
     // Category routes

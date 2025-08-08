@@ -89,7 +89,7 @@
                     <li><a href="{{ route('profile.show') }}">Mijn Profiel</a></li>
                     <li><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Uitloggen ({{ auth()->user()->name }})</a></li>
                     @if(auth()->user()->isAdmin())
-                        <li><a href="{{ route('admin.users.index') }}" style="color: #d4af37;">👑 Admin</a></li>
+                        <li><a href="{{ route('admin.dashboard') }}" style="color: #d4af37; font-weight: bold;">👑 Admin Dashboard</a></li>
                     @endif
                 @else
                     <li><a href="{{ route('login') }}">Login</a></li>
