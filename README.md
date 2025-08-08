@@ -226,7 +226,7 @@ php artisan serve
 - **XSS Prevention**: Input sanitization
 - **Admin Middleware**: Route protection
 
-## 📚 Gebruikte Bronnen
+##  Gebruikte Bronnen
 
 
 ### AI Assistentie
