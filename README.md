@@ -187,7 +187,7 @@ php artisan serve
 - **Password**: Password!321
 - **Username**: admin
 
-## 📱 Screenshots
+##  Screenshots
 
 ### Desktop Views
 - Home Page: Overzicht van auto's en nieuws
@@ -241,7 +241,7 @@ php artisan serve
 2. **Faker Library**: Voor test data generatie
 3. **Carbon**: Voor datum manipulatie
 
-## 🔄 Git Commit History
+##  Git Commit History
 
 Het project bevat meerdere commits per functionaliteit:
 
