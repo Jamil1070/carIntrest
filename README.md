@@ -1,10 +1,18 @@
 # CarIntrest - Auto Community Platform
 
+<<<<<<< HEAD
 ## Projectbeschrijving
 
 CarIntrest is een volledig functionele auto community platform gebouwd met Laravel 12.x. Het platform biedt gebruikers de mogelijkheid om auto's te bekijken, nieuws te lezen, commentaren te plaatsen en contact op te nemen. Daarnaast beschikt het over een uitgebreid admin panel voor contentbeheer.
 
 ### Hoofdfunctionaliteiten
+=======
+##  Projectbeschrijving
+
+CarIntrest is een volledig functionele auto community platform gebouwd met Laravel 12.x. Het platform biedt gebruikers de mogelijkheid om auto's te bekijken, nieuws te lezen, commentaren te plaatsen en contact op te nemen. Daarnaast beschikt het over een uitgebreid admin panel voor contentbeheer.
+
+###  Hoofdfunctionaliteiten
+>>>>>>> 7a2318c726dcf249f4912c9850416b90cad464cb
 
 - **Auto Catalogus**: Bekijk en beheer auto's met afbeeldingen en beschrijvingen
 - **Nieuws Systeem**: Volledig nieuws management met tags en many-to-many relaties
@@ -15,7 +23,7 @@ CarIntrest is een volledig functionele auto community platform gebouwd met Larav
 - **Admin Dashboard**: Volledig admin panel voor alle content management
 - **Responsive Design**: Mobile-first design met hamburger menu
 
-## 🛠 Technische Vereisten Implementatie
+##  Technische Vereisten Implementatie
 
 ### 1. **Laravel Framework** 
 - **Locatie**: Gehele project
@@ -296,7 +304,11 @@ php artisan serve
 - **XSS Prevention**: Input sanitization
 - **Admin Middleware**: Route protection
 
+<<<<<<< HEAD
 ## Gebruikte Bronnen
+=======
+##  Gebruikte Bronnen
+>>>>>>> 7a2318c726dcf249f4912c9850416b90cad464cb
 
 
 ### AI Assistentie
