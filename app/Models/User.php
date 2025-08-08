@@ -82,4 +82,20 @@ class User extends Authenticatable
         
         return 'https://ui-avatars.com/api/?name=' . urlencode($this->getDisplayName()) . '&color=7F9CF5&background=EBF4FF';
     }
+
+    /**
+     * Relatie: een gebruiker heeft veel nieuwtjes
+     */
+    public function news()
+    {
+        return $this->hasMany(News::class);
+    }
+
+    /**
+     * Relatie: een gebruiker heeft veel comments
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

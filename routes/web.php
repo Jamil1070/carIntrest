@@ -7,11 +7,13 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Admin\FaqAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ContactAdminController;
 use App\Http\Controllers\Admin\CarAdminController;
+use App\Http\Controllers\Admin\NewsAdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -37,6 +39,10 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 // FAQ routes
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+
+// News routes
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 
 // Authentication routes
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -76,6 +82,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     
     // FAQ management
     Route::resource('faq', FaqAdminController::class);
+    
+    // News management
+    Route::resource('news', NewsAdminController::class);
     
     // Category routes
     Route::get('/faq-categories/create', [FaqAdminController::class, 'createCategory'])->name('faq.categories.create');

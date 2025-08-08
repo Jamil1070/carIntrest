@@ -13,8 +13,11 @@ class DatabaseSeeder extends Seeder
     {
         // Andere seeders kun je hier ook aanroepen
         $this->call([
+            AdminUserSeeder::class,
             CarSeeder::class,
             CommentSeeder::class,
+            FaqSeeder::class,
+            NewsSeeder::class,
         ]);
     }
 }
