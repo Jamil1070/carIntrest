@@ -1,10 +1,10 @@
 # CarIntrest - Auto Community Platform
 
-## 📋 Projectbeschrijving
+## Projectbeschrijving
 
 CarIntrest is een volledig functionele auto community platform gebouwd met Laravel 12.x. Het platform biedt gebruikers de mogelijkheid om auto's te bekijken, nieuws te lezen, commentaren te plaatsen en contact op te nemen. Daarnaast beschikt het over een uitgebreid admin panel voor contentbeheer.
 
-### 🚀 Hoofdfunctionaliteiten
+### Hoofdfunctionaliteiten
 
 - **Auto Catalogus**: Bekijk en beheer auto's met afbeeldingen en beschrijvingen
 - **Nieuws Systeem**: Volledig nieuws management met tags en many-to-many relaties
@@ -131,7 +131,7 @@ CarIntrest is een volledig functionele auto community platform gebouwd met Larav
 - **News**: `database/seeders/NewsSeeder.php:20-57`
 - **Admin User**: `database/seeders/AdminUserSeeder.php:12-23`
 
-## 🔧 Installatiehandleiding
+##  Installatiehandleiding
 
 ### Vereisten
 - PHP 8.1 of hoger
@@ -187,21 +187,91 @@ php artisan serve
 - **Password**: Password!321
 - **Username**: admin
 
-## 📱 Screenshots
+##  Screenshots
 
-### Desktop Views
-- Home Page: Overzicht van auto's en nieuws
-- Admin Dashboard: Statistieken en beheer opties
-- News Overview: Nieuwsartikelen met tags
+### Hoofdpagina & Navigation
+![Homepage](c:\Users\burha\OneDrive\Bureaublad\screenshot\homepagina.png)
+*Homepage met auto overzicht en nieuws*
 
-### Mobile Views
-- Mobile Navigation: Hamburger menu met smooth animaties
-- Responsive Design: Optimaal op alle schermgroottes
+![Hamburger Navigation](c:\Users\burha\OneDrive\Bureaublad\screenshot\hamburger_navigatie.jpg)
+*Responsive hamburger menu voor mobile devices*
 
-### Admin Features
-- Car Management: CRUD operaties voor auto's
-- News Creation: Nieuws toevoegen met tags en afbeeldingen
-- User Management: Gebruikers beheer en admin rechten
+![Responsive Design](c:\Users\burha\OneDrive\Bureaublad\screenshot\responsive.jpg)
+*Mobile-first responsive design*
+
+### Authenticatie Systeem
+![Login Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\login_pagina.jpg)
+*Login interface voor gebruikers*
+
+![Registratie Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\registratie_pagina.jpg)
+*Registratie formulier voor nieuwe gebruikers*
+
+![Wachtwoord Vergeten](c:\Users\burha\OneDrive\Bureaublad\screenshot\wachtwoord_vergeten.jpg)
+*Wachtwoord reset functionaliteit*
+
+### Profiel Beheer
+![Mijn Profiel](c:\Users\burha\OneDrive\Bureaublad\screenshot\mijn_profiel.jpg)
+*Gebruiker profiel overzicht*
+
+![Profiel Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\profiel_bewerken.jpg)
+*Profiel informatie bijwerken*
+
+![Profielen Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\profielen_pagina.jpg)
+*Overzicht van alle gebruikers profielen*
+
+### Admin Dashboard
+![Admin Dashboard](c:\Users\burha\OneDrive\Bureaublad\screenshot\overzicht_dashboard.jpg)
+*Admin dashboard met statistieken en beheer opties*
+
+### Nieuws Systeem
+![Nieuws Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_pagina.jpg)
+*Nieuws overzicht voor bezoekers*
+
+![Nieuws Bekijken](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_bekijken.jpg)
+*Volledig nieuwsartikel met tags*
+
+![Nieuws Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_beheren.jpg)
+*Admin nieuws management interface*
+
+![Nieuws Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_bewerken.jpg)
+*Nieuwsartikel bewerken met tags en afbeeldingen*
+
+![Nieuws Bericht](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_bericht.jpg)
+*Nieuw artikel aanmaken interface*
+
+### Auto Management
+![Auto's Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\autos_beheren.jpg)
+*CRUD operaties voor auto beheer*
+
+![Auto Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\auto_bewerken.jpg)
+*Auto informatie bijwerken*
+
+![Auto Toevoegen](c:\Users\burha\OneDrive\Bureaublad\screenshot\auto_toevoegen.jpg)
+*Nieuwe auto toevoegen aan de catalogus*
+
+### Gebruikers Beheer
+![Gebruikers Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\gebruiker_beheren.jpg)
+*Admin gebruikers management*
+
+![Gebruiker Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\gebruiker_bewerken.jpg)
+*Gebruiker rechten en informatie beheren*
+
+### FAQ Systeem
+![FAQ Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\faq_pagina.jpg)
+*Veelgestelde vragen interface*
+
+![FAQ Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\faq_beheren.jpg)
+*Admin FAQ management systeem*
+
+### Contact Systeem
+![Contact Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\contact_pagina.jpg)
+*Contact formulier met client-side validatie*
+
+![Contact Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\contact_beheren.jpg)
+*Admin contact berichten overzicht*
+
+![Contact Bekijken](c:\Users\burha\OneDrive\Bureaublad\screenshot\contact_bekijken.jpg)
+*Volledig contact bericht met acties*
 
 ## Bijzondere Features
 
@@ -226,7 +296,7 @@ php artisan serve
 - **XSS Prevention**: Input sanitization
 - **Admin Middleware**: Route protection
 
-## 📚 Gebruikte Bronnen
+## Gebruikte Bronnen
 
 
 ### AI Assistentie
@@ -241,7 +311,7 @@ php artisan serve
 2. **Faker Library**: Voor test data generatie
 3. **Carbon**: Voor datum manipulatie
 
-## 🔄 Git Commit History
+##  Git Commit History
 
 Het project bevat meerdere commits per functionaliteit:
 
