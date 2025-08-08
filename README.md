@@ -1,61 +1,273 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# CarIntrest - Auto Community Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📋 Projectbeschrijving
 
-## About Laravel
+CarIntrest is een volledig functionele auto community platform gebouwd met Laravel 12.x. Het platform biedt gebruikers de mogelijkheid om auto's te bekijken, nieuws te lezen, commentaren te plaatsen en contact op te nemen. Daarnaast beschikt het over een uitgebreid admin panel voor contentbeheer.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 🚀 Hoofdfunctionaliteiten
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Auto Catalogus**: Bekijk en beheer auto's met afbeeldingen en beschrijvingen
+- **Nieuws Systeem**: Volledig nieuws management met tags en many-to-many relaties
+- **Gebruikers Authenticatie**: Registratie, login, profiel beheer
+- **Comment Systeem**: Reacties plaatsen op auto's (alleen voor ingelogde gebruikers)
+- **FAQ Systeem**: Veelgestelde vragen met categorieën
+- **Contact Formulier**: Met client-side validatie en email notificaties
+- **Admin Dashboard**: Volledig admin panel voor alle content management
+- **Responsive Design**: Mobile-first design met hamburger menu
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠 Technische Vereisten Implementatie
 
-## Learning Laravel
+### 1. **Laravel Framework** 
+- **Locatie**: Gehele project
+- **Versie**: Laravel 12.x
+- **Implementatie**: `composer.json:8-12`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. **MVC Architectuur**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Models:
+- **User Model**: `app/Models/User.php:1-47`
+- **Car Model**: `app/Models/Car.php:1-32`  
+- **News Model**: `app/Models/News.php:1-29`
+- **Tag Model**: `app/Models/Tag.php:1-18`
+- **Comment Model**: `app/Models/Comment.php:1-25`
+- **FAQ Models**: `app/Models/Faq.php:1-23` & `app/Models/FaqCategory.php:1-18`
+- **Contact Model**: `app/Models/Contact.php:1-23`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Controllers:
+- **HomeController**: `app/Http/Controllers/HomeController.php:1-27`
+- **NewsController**: `app/Http/Controllers/NewsController.php:1-25`
+- **ContactController**: `app/Http/Controllers/ContactController.php:1-52`
+- **Admin Controllers**: `app/Http/Controllers/Admin/` (7 controllers)
 
-## Laravel Sponsors
+#### Views:
+- **Layouts**: `resources/views/layouts/app.blade.php:1-245`
+- **Home Views**: `resources/views/home.blade.php:1-89`
+- **Admin Views**: `resources/views/admin/` (18+ views)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 3. **Database & Migraties**
 
-### Premium Partners
+#### Migraties (14 totaal):
+- **Users**: `database/migrations/0001_01_01_000000_create_users_table.php`
+- **Cars**: `database/migrations/2025_08_07_161845_create_cars_table.php`
+- **Comments**: `database/migrations/2025_08_07_175454_create_comments_table.php`
+- **FAQ System**: `database/migrations/2025_08_07_183510_create_faq_categories_table.php`
+- **News System**: `database/migrations/2025_08_08_182434_create_news_table.php`
+- **Many-to-Many**: `database/migrations/2025_08_08_182553_create_news_tags_table.php`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+#### Seeders:
+- **DatabaseSeeder**: `database/seeders/DatabaseSeeder.php:1-20`
+- **AdminUserSeeder**: `database/seeders/AdminUserSeeder.php:1-25`
+- **CarSeeder**: `database/seeders/CarSeeder.php:1-39`
+- **NewsSeeder**: `database/seeders/NewsSeeder.php:1-59`
 
-## Contributing
+### 4. **Authenticatie Systeem**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### Implementatie:
+- **AuthController**: `app/Http/Controllers/AuthController.php:1-98`
+- **Middleware**: `app/Http/Middleware/AdminMiddleware.php:1-25`
+- **Routes**: `routes/web.php:45-52`
+- **Login Views**: `resources/views/auth/login.blade.php:1-78`
 
-## Code of Conduct
+### 5. **CRUD Operaties**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Auto Management:
+- **Create**: `app/Http/Controllers/Admin/CarAdminController.php:35-58`
+- **Read**: `app/Http/Controllers/Admin/CarAdminController.php:15-20`
+- **Update**: `app/Http/Controllers/Admin/CarAdminController.php:80-106` 
+- **Delete**: `app/Http/Controllers/Admin/CarAdminController.php:108-115`
 
-## Security Vulnerabilities
+#### News Management:
+- **CRUD**: `app/Http/Controllers/Admin/NewsAdminController.php:1-120`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 6. **Many-to-Many Relaties**
 
-## License
+#### News-Tags Relatie:
+- **News Model**: `app/Models/News.php:24-27`
+- **Tag Model**: `app/Models/Tag.php:13-16`
+- **Pivot Table**: `database/migrations/2025_08_08_182553_create_news_tags_table.php:15-20`
+- **Controller Usage**: `app/Http/Controllers/Admin/NewsAdminController.php:45-47`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 7. **Form Validatie**
+
+#### Server-side Validatie:
+- **Contact Form**: `app/Http/Controllers/ContactController.php:16-30`
+- **News Form**: `app/Http/Controllers/Admin/NewsAdminController.php:30-36`
+
+#### Client-side Validatie:
+- **Contact Form**: `resources/views/contact.blade.php:135-247`
+- **JavaScript Validation**: `resources/views/contact.blade.php:180-220`
+
+### 8. **File Upload**
+
+#### Implementatie:
+- **Car Images**: `app/Http/Controllers/Admin/CarAdminController.php:70-78`
+- **News Images**: `app/Http/Controllers/Admin/NewsAdminController.php:60-68`
+- **Storage**: `public/images/` directory
+
+### 9. **Responsive Design**
+
+#### CSS Media Queries:
+- **Mobile First**: `resources/views/layouts/app.blade.php:82-138`
+- **Hamburger Menu**: `resources/views/layouts/app.blade.php:30-62`
+- **Breakpoints**: 768px en 480px
+
+### 10. **Blade Components**
+
+#### Alert Component:
+- **Component**: `resources/views/components/alert.blade.php:1-86`
+- **Usage**: Herbruikbaar in alle views
+
+### 11. **Route Management**
+
+#### Route Definitie:
+- **Web Routes**: `routes/web.php:1-87`
+- **Admin Routes**: `routes/web.php:55-76`
+- **API Routes**: Resource controllers voor RESTful operations
+
+### 12. **Database Seeding**
+
+#### Seed Data:
+- **Cars**: `database/seeders/CarSeeder.php:15-37`
+- **News**: `database/seeders/NewsSeeder.php:20-57`
+- **Admin User**: `database/seeders/AdminUserSeeder.php:12-23`
+
+## 🔧 Installatiehandleiding
+
+### Vereisten
+- PHP 8.1 of hoger
+- Composer
+- Node.js & NPM
+- MySQL/SQLite database
+
+### Installatie Stappen
+
+1. **Clone Repository**
+```bash
+git clone https://github.com/Jamil1070/carIntrest.git
+cd carIntrest
+```
+
+2. **Install Dependencies**
+```bash
+composer install
+npm install && npm run build
+```
+
+3. **Environment Setup**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. **Database Configuratie**
+Bewerk `.env` file:
+```env
+DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/database/database.sqlite
+```
+
+5. **Database Migratie & Seeding**
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+6. **Storage Link**
+```bash
+php artisan storage:link
+```
+
+7. **Server Starten**
+```bash
+php artisan serve
+```
+
+### Default Admin Account
+- **Email**: admin@ehb.be
+- **Password**: Password!321
+- **Username**: admin
+
+## 📱 Screenshots
+
+### Desktop Views
+- Home Page: Overzicht van auto's en nieuws
+- Admin Dashboard: Statistieken en beheer opties
+- News Overview: Nieuwsartikelen met tags
+
+### Mobile Views
+- Mobile Navigation: Hamburger menu met smooth animaties
+- Responsive Design: Optimaal op alle schermgroottes
+
+### Admin Features
+- Car Management: CRUD operaties voor auto's
+- News Creation: Nieuws toevoegen met tags en afbeeldingen
+- User Management: Gebruikers beheer en admin rechten
+
+## Bijzondere Features
+
+### 1. **Dual Layout System**
+- **Public Layout**: `resources/views/layouts/app.blade.php` (Gele theme)
+- **Consistent Design**: Alle admin views gebruiken dezelfde gele layout
+
+### 2. **Advanced Comment System**
+- **Authentication Required**: `app/Http/Controllers/CommentController.php:16-18`
+- **User Association**: Comments gekoppeld aan gebruikers
+
+### 3. **Real-time Form Validation**
+- **Live Feedback**: JavaScript validatie met visuele feedback
+- **Error Styling**: Dynamic CSS classes voor form states
+
+### 4. **Mobile-First Design**
+- **Hamburger Menu**: Smooth animaties en auto-close functionaliteit
+- **Responsive Tables**: Stack layout op mobile devices
+
+### 5. **Security Features**
+- **CSRF Protection**: Alle forms beschermd
+- **XSS Prevention**: Input sanitization
+- **Admin Middleware**: Route protection
+
+## 📚 Gebruikte Bronnen
+
+
+### AI Assistentie
+1. **GitHub Copilot**
+2. **AI Chat Sessions** 
+   - Project architectuur en planning (teksten , beschrijvingen)
+   - debuggen 
+   - layouts
+
+### Libraries & Packages
+1. **Laravel Framework**: https://laravel.com/
+2. **Faker Library**: Voor test data generatie
+3. **Carbon**: Voor datum manipulatie
+
+## 🔄 Git Commit History
+
+Het project bevat meerdere commits per functionaliteit:
+
+### Commit Structure:
+- **Initial Setup**: Project initialisatie en basis configuratie
+- **Models & Migrations**: Database structuur implementatie
+- **Authentication**: Login/register functionaliteit
+- **CRUD Operations**: Basis CRUD voor alle entiteiten
+- **Admin Panel**: Admin dashboard en management
+- **Responsive Design**: Mobile-first implementatie
+- **Advanced Features**: News systeem, validatie, components
+- **Final Polish**: Bug fixes en laatste verbeteringen
+
+### Daily Commits:
+Commits gedaan op verschillende dagen tijdens ontwikkeling, zie Git history voor details.
+
+
+
+## Contact
+
+Voor vragen over dit project:
+- **Naam**: Chaud-ry Burhan
+- **Project**: Backend Development Herexamen
+- **Jaar**: 2025
+
+---
+
+*Dit project is ontwikkeld als onderdeel van het backend development herexamen en demonstreert alle vereiste Laravel concepten en best practices.*
+
