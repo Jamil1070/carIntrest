@@ -18,6 +18,7 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
         }
         header .logo {
             font-weight: bold;
@@ -26,6 +27,43 @@
             letter-spacing: 2px;
             color: #212121;
         }
+        
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #212121;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        nav {
+            transition: all 0.3s ease;
+        }
+        
         nav ul {
             list-style: none;
             margin: 0;
@@ -59,17 +97,84 @@
         }
 
         /* Responsive for smaller screens */
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 10px;
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
             }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffeb3b;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            
+            nav.active {
+                max-height: 500px;
+            }
+            
             nav ul {
                 flex-direction: column;
-                gap: 10px;
+                gap: 0;
+                padding: 20px;
+                width: 100%;
             }
+            
+            nav ul li {
+                width: 100%;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 12px 15px;
+                border-radius: 8px;
+                background: rgba(255,255,255,0.1);
+                margin-bottom: 8px;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+            
+            nav ul li a:hover {
+                background: rgba(255,255,255,0.2);
+                transform: translateY(-2px);
+            }
+            
             main {
                 padding: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 12px 15px;
+            }
+            
+            header .logo {
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+            
+            nav ul {
+                padding: 15px;
+            }
+            
+            nav ul li a {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+            
+            main {
+                padding: 10px;
+            }
+            
+            footer {
+                font-size: 12px;
+                padding: 12px 0;
             }
         }
     </style>
@@ -77,7 +182,15 @@
 <body>
     <header>
         <div class="logo">CarIntrest</div>
-        <nav>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav id="nav-menu">
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
@@ -112,5 +225,50 @@
     <footer>
         herexamen | project backend | Chaud-ry Burhan
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const nav = document.getElementById('nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        nav.classList.remove('active');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnHamburger = hamburger.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnHamburger && nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+
+            // Close menu on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    nav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
