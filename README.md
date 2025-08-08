@@ -1,3 +1,4 @@
+
 # CarIntrest - Auto Community Platform
 
 <<<<<<< HEAD
@@ -198,88 +199,90 @@ php artisan serve
 ##  Screenshots
 
 ### Hoofdpagina & Navigation
-![Homepage](c:\Users\burha\OneDrive\Bureaublad\screenshot\homepagina.png)
+![Homepage](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/homepagina.png)
+
+![Homepage](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/nieuws_bericht.jpg)
 *Homepage met auto overzicht en nieuws*
 
-![Hamburger Navigation](c:\Users\burha\OneDrive\Bureaublad\screenshot\hamburger_navigatie.jpg)
+
+
+![Hamburger Navigation](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/responsive.jpg)
+
+![Hamburger Navigation](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/hamburger_navigatie.jpg)
 *Responsive hamburger menu voor mobile devices*
 
-![Responsive Design](c:\Users\burha\OneDrive\Bureaublad\screenshot\responsive.jpg)
-*Mobile-first responsive design*
+
 
 ### Authenticatie Systeem
-![Login Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\login_pagina.jpg)
+![Login Pagina](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/login_pagina.jpg)
 *Login interface voor gebruikers*
 
-![Registratie Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\registratie_pagina.jpg)
+![Registratie Pagina](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/registratie_pagina.jpg)
+
+
 *Registratie formulier voor nieuwe gebruikers*
 
-![Wachtwoord Vergeten](c:\Users\burha\OneDrive\Bureaublad\screenshot\wachtwoord_vergeten.jpg)
+![Wachtwoord Vergeten](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/wachtwoord_vergeten.jpg)
 *Wachtwoord reset functionaliteit*
 
 ### Profiel Beheer
-![Mijn Profiel](c:\Users\burha\OneDrive\Bureaublad\screenshot\mijn_profiel.jpg)
+![Mijn Profiel](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/mijn_profiel.jpg)
 *Gebruiker profiel overzicht*
 
-![Profiel Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\profiel_bewerken.jpg)
+![Profiel Bewerken](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/gebruiker_bewerken.jpg)
 *Profiel informatie bijwerken*
 
-![Profielen Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\profielen_pagina.jpg)
+![Profielen Pagina](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/profielen_pagina.jpg)
 *Overzicht van alle gebruikers profielen*
 
 ### Admin Dashboard
-![Admin Dashboard](c:\Users\burha\OneDrive\Bureaublad\screenshot\overzicht_dashboard.jpg)
-*Admin dashboard met statistieken en beheer opties*
+![Admin Dashboard](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/admin_dashboard.jpg)
+*Admin dashboard *
 
 ### Nieuws Systeem
-![Nieuws Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_pagina.jpg)
+![Nieuws Pagina]([c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_pagina.jpg](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/nieuws_bekijken.jpg))
 *Nieuws overzicht voor bezoekers*
 
 ![Nieuws Bekijken](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_bekijken.jpg)
 *Volledig nieuwsartikel met tags*
 
-![Nieuws Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_beheren.jpg)
-*Admin nieuws management interface*
 
-![Nieuws Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_bewerken.jpg)
-*Nieuwsartikel bewerken met tags en afbeeldingen*
 
-![Nieuws Bericht](c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_bericht.jpg)
-*Nieuw artikel aanmaken interface*
+![Nieuws Bewerken](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/nieuws_beheren.jpg)
+*Nieuwsartikel bewerken *
+
+
 
 ### Auto Management
-![Auto's Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\autos_beheren.jpg)
+![Auto's Beheren](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/auto_overzicht.jpg)
 *CRUD operaties voor auto beheer*
 
-![Auto Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\auto_bewerken.jpg)
-*Auto informatie bijwerken*
 
-![Auto Toevoegen](c:\Users\burha\OneDrive\Bureaublad\screenshot\auto_toevoegen.jpg)
+
+![Auto Toevoegen](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/auto_toevoegen.jpg)
 *Nieuwe auto toevoegen aan de catalogus*
 
 ### Gebruikers Beheer
-![Gebruikers Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\gebruiker_beheren.jpg)
-*Admin gebruikers management*
 
-![Gebruiker Bewerken](c:\Users\burha\OneDrive\Bureaublad\screenshot\gebruiker_bewerken.jpg)
+
+![Gebruiker Bewerken](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/admin_rechten.jpg)
 *Gebruiker rechten en informatie beheren*
 
 ### FAQ Systeem
-![FAQ Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\faq_pagina.jpg)
+![FAQ Pagina](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/faq_pagina.jpg)
 *Veelgestelde vragen interface*
 
-![FAQ Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\faq_beheren.jpg)
+![FAQ Beheren](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/faq_beheren.jpg)
 *Admin FAQ management systeem*
 
 ### Contact Systeem
-![Contact Pagina](c:\Users\burha\OneDrive\Bureaublad\screenshot\contact_pagina.jpg)
+![Contact Pagina](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/contact_pagina.jpg)
 *Contact formulier met client-side validatie*
 
-![Contact Beheren](c:\Users\burha\OneDrive\Bureaublad\screenshot\contact_beheren.jpg)
-*Admin contact berichten overzicht*
+### about 
+![Contact Pagina](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/about_pagina.jpg)
+*about pagina*
 
-![Contact Bekijken](c:\Users\burha\OneDrive\Bureaublad\screenshot\contact_bekijken.jpg)
-*Volledig contact bericht met acties*
 
 ## Bijzondere Features
 
