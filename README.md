@@ -240,8 +240,7 @@ php artisan serve
 *Admin dashboard *
 
 ### Nieuws Systeem
-![Nieuws Pagina]([c:\Users\burha\OneDrive\Bureaublad\screenshot\nieuws_pagina.jpg](https://github.com/Jamil1070/carIntrest/blob/3d842ebf9cd2234acb22acc160f6e7573a9200c5/screenshot/nieuws_bekijken.jpg))
-*Nieuws overzicht voor bezoekers*
+
 
 ![Nieuws Bekijken](https://github.com/Jamil1070/carIntrest/blob/35841c0f830212f149442961f6eb800da8be129e/screenshot/nieuws_bekijken.jpg)
 *Volledig nieuwsartikel met tags*
